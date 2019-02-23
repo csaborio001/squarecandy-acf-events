@@ -1,12 +1,13 @@
 # Square Candy ACF Events
 
-~Current Version:1.1.2~
+~Current Version:1.1.3~
 
 A custom events plugin using Advanced Custom Fields
 
 * Requires Advanced Custom Fields Pro 5.x
 * Outputs HTML including schema.org structured data
 * A basic, easy to use events system
+* Does not play will Gutenberg unless you install this plugin: https://wordpress.org/plugins/classic-editor/
 
 ## Settings
 
@@ -65,6 +66,18 @@ Combine any of the above as needed...
 `[squarecandy_events type=past style=compact cat=my-example-category]`
 
 ## History
+
+### v1.1.3
+
+* Modified Readme file to warn about Gutenberg issues and new features.
+* Included plugin.php from inc/acf.php to avoid an error when calling is_plugin_active() function.
+* Added event pricing option.
+* Added currency symbol option with all country codes (thanks NinjaForms).
+* Added country list from drop-down (thanks WooCommerce).
+* Separated Event information into tabs (Pre-event and Post-event).
+* Added a repeater field for event material.
+* Added category taxonomy directly in the CPT creation.
+* Added image event field.
 
 ### v1.1.2
 
