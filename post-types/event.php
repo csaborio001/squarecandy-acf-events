@@ -33,7 +33,7 @@ function event_init() {
 	) );
 
 }
-add_action( 'init', 'event_init' );
+add_action( 'setup_theme', 'event_init' );
 
 function event_updated_messages( $messages ) {
 	global $post;

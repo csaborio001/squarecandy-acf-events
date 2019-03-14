@@ -21,7 +21,7 @@ function squarecandy_events_add_fields() {
 		'label' => 'Event Image',
 		'name' => 'event_image',
 		'type' => 'image',
-		'return_format' => 'array',
+		'return_format' => 'id',
 		'preview_size' => 'medium',
 
  	);
@@ -138,6 +138,7 @@ function squarecandy_events_add_fields() {
 		'wrapper' => array(
 			'width' => 25,
 		),
+		'return_format' => 'array',
 		'choices' => array(
 			// 'AED' => '&#x62f;.&#x625;',
 			// 'AFN' => '&#x60b;',

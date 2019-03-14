@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<header class="page-header">
-				<h1 class="page-title"><?php _e('Upcoming Events', 'squarecandy-acf-events'); ?></h1>
+				<h1 class="page-title"><?php _e('Upcoming Events!!', 'squarecandy-acf-events'); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php echo do_shortcode('[squarecandy_events]'); ?>

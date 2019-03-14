@@ -78,6 +78,8 @@ Combine any of the above as needed...
 * Added a repeater field for event material.
 * Added category taxonomy directly in the CPT creation.
 * Added image event field.
+* Added image gallery field in post-event tab.
+
 
 ### v1.1.2
 

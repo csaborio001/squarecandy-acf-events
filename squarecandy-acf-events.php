@@ -87,7 +87,7 @@ include( ACF_EVENTS_DIR_PATH . 'inc/shortcodes.php');
 // provide custom theming for individual event pages
 // https://code.tutsplus.com/articles/plugin-templating-within-wordpress--wp-31088
 
-add_filter( 'template_include', 'squarecandy_acf_events_template_chooser');
+// add_filter( 'template_include', 'squarecandy_acf_events_template_chooser');
 
 function squarecandy_acf_events_template_chooser( $template ) {
 
