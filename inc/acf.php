@@ -19,7 +19,7 @@ function squarecandy_events_add_fields() {
 	$eventfields[] = array(
 		'key' => 'field_0aFVqq90AQvk0',
 		'label' => 'Event Image',
-		'name' => 'event_image',
+		'name' => 'featured_image',
 		'type' => 'image',
 		'return_format' => 'id',
 		'preview_size' => 'medium',

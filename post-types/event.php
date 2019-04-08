@@ -29,7 +29,6 @@ function event_init() {
 		'show_in_rest'      => true,
 		'rest_base'         => 'event',
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
-		'taxonomies' 			=> array( 'category' ),
 	) );
 
 }
