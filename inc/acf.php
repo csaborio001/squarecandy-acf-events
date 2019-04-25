@@ -683,8 +683,8 @@ function squarecandy_events_add_fields() {
 	);
 	$eventfields[] = array(
 		'key' => 'field_5616bf58ed0ac',
-		'label' => 'Tickets Link',
-		'name' => 'tickets_link',
+		'label' => 'Registration Link',
+		'name' => 'registration_link',
 		'type' => 'url',
 		'wrapper' => array(
 			'width' => 50,

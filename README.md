@@ -67,6 +67,11 @@ Combine any of the above as needed...
 
 ## History
 
+### 1.1.4 
+
+* Changed the name the field event_image to featured_image
+* 
+
 ### v1.1.3
 
 * Modified Readme file to warn about Gutenberg issues and new features.
