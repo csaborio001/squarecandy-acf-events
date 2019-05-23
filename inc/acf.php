@@ -680,6 +680,7 @@ function squarecandy_events_add_fields() {
 		'wrapper' => array(
 			'width' => 50,
 		),
+		'instructions' => __( 'The link to where people can go to obtain more information about the event.', 'squarecandy' ),
 	);
 	$eventfields[] = array(
 		'key' => 'field_5616bf58ed0ac',
@@ -689,6 +690,8 @@ function squarecandy_events_add_fields() {
 		'wrapper' => array(
 			'width' => 50,
 		),
+
+		'instructions' => __( 'The link to the event to where people have to register for free or for a fee.', 'squarecandy' ),
 	);
 	$eventfields[] = array(
 		'key' => 'field_facebooklink7293484',

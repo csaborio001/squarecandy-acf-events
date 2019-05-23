@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Square Candy ACF Events
-Plugin URI:  https://github.com/squarecandy/squarecandy-acf-events
-GitHub Plugin URI:  https://github.com/squarecandy/squarecandy-acf-events
+Plugin URI:  https://github.com/csaborio001/squarecandy-acf-events
+GitHub Plugin URI:  https://github.com/csaborio001/squarecandy-acf-events
 Description: A custom events plugin that using Advanced Custom Fields
-Version:	 1.1.2
-Author:	  Peter Wise
-Author URI:  http://squarecandy.net
+Version:	 1.0.2.9
+Author:	  Peter Wise / Christian Saborio
+Author URI:  http:www.scorpiotek.com
 Text Domain: squarecandy-acf-events
 */
 
