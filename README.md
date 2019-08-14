@@ -1,6 +1,6 @@
 # Square Candy ACF Events
 
-Current Version:1.1.3
+Current Version: 1.1.4
 
 A custom events plugin using Advanced Custom Fields
 
@@ -70,9 +70,13 @@ Combine any of the above as needed...
 ### 1.1.4 
 
 * Changed the name the field event_image to featured_image
-* 
+* Removed the map zoom.
+* Removed event registration link.
+* Added the following fields: speaker information, event gallery.
+* Added testimonials in the Post Event tab
+* Changed the position of the fields to be normal so that they display with Gutenberg correctly
 
-### v1.1.3
+### 1.1.3
 
 * Modified Readme file to warn about Gutenberg issues and new features.
 * Included plugin.php from inc/acf.php to avoid an error when calling is_plugin_active() function.
@@ -86,28 +90,28 @@ Combine any of the above as needed...
 * Added image gallery field in post-event tab.
 
 
-### v1.1.2
+### 1.1.2
 
 * "All" type no longer grouped by Year
 * Add option for images in preview
 
-### v1.1.1
+### 1.1.1
 
 * Add "all" display type
 * Update examples
 
-### v1.1.0
+### 1.1.0
 
 * Add Optional Events Categories
 * Add better support for more unusual combos of start date / end date / start time / end time. (Helps with imported data that might not get the "All Day" or "Show End Date" context right)
 * Clean up options screen
 * Start Tagging Releases
 
-### v1.0.1
+### 1.0.1
 
 * Testing if the upgrade system works in the WordPress UI
 
-### v1.0.0
+### 1.0.0
 
 * Add updating capacity through the WordPress UI via GitHub
 

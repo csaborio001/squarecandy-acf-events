@@ -11,8 +11,8 @@ function squarecandy_events_add_fields() {
 
 	$eventfields[] = array(
 		'key' => 'field_8pZeHGmq7h47N',
-		'label' => 'Pre-event',
-		'name' => 'pre_event_tab',
+		'label' => 'Event Info',
+		'name' => 'event_info_tab',
 		'type' => 'tab',
 	);
 
@@ -659,19 +659,19 @@ function squarecandy_events_add_fields() {
 		'zoom' => $default_zoom,
 		'height' => '280',
 	);
-	$eventfields[] = array(
-		'key' => 'field_mapzoom273489241f6',
-		'label' => 'Map Zoom Level',
-		'name' => 'zoom_level',
-		'type' => 'range',
-		'instructions' => 'select how far zoomed in this map appears (setting reflected on front-end event page only, not in the map box above)',
-		'default_value' => $default_zoom,
-		'min' => 8,
-		'max' => 21,
-		'step' => 1,
-		'prepend' => '-',
-		'append' => '+',
-	);
+	// $eventfields[] = array(
+	// 	'key' => 'field_mapzoom273489241f6',
+	// 	'label' => 'Map Zoom Level',
+	// 	'name' => 'zoom_level',
+	// 	'type' => 'range',
+	// 	'instructions' => 'select how far zoomed in this map appears (setting reflected on front-end event page only, not in the map box above)',
+	// 	'default_value' => $default_zoom,
+	// 	'min' => 8,
+	// 	'max' => 21,
+	// 	'step' => 1,
+	// 	'prepend' => '-',
+	// 	'append' => '+',
+	// );
 	$eventfields[] = array(
 		'key' => 'field_5616befced0ab',
 		'label' => 'More Info Link',
@@ -682,22 +682,76 @@ function squarecandy_events_add_fields() {
 		),
 		'instructions' => __( 'The link to where people can go to obtain more information about the event.', 'squarecandy' ),
 	);
-	$eventfields[] = array(
-		'key' => 'field_5616bf58ed0ac',
-		'label' => 'Registration Link',
-		'name' => 'registration_link',
-		'type' => 'url',
-		'wrapper' => array(
-			'width' => 50,
-		),
+	// $eventfields[] = array(
+	// 	'key' => 'field_5616bf58ed0ac',
+	// 	'label' => 'Registration Link',
+	// 	'name' => 'registration_link',
+	// 	'type' => 'url',
+	// 	'wrapper' => array(
+	// 		'width' => 50,
+	// 	),
 
-		'instructions' => __( 'The link to the event to where people have to register for free or for a fee.', 'squarecandy' ),
-	);
+	// 	'instructions' => __( 'The link to the event to where people have to register for free or for a fee.', 'squarecandy' ),
+	// );
 	$eventfields[] = array(
 		'key' => 'field_facebooklink7293484',
 		'label' => 'Facebook Event Link',
 		'name' => 'facebook_link',
 		'type' => 'url',
+		'wrapper' => array(
+			'width' => 50,
+		),
+		'instructions' => __( 'The link where people can visit the event info page on Facebook', 'squarecandy' ),
+	);
+
+	$eventfields[] = array(
+		'key' => 'field_M2CjqOYquPfhW',
+		'label' => 'Speaker Information',
+		'name' => 'speaker_information',
+		'type' => 'repeater',
+		'instructions' => 'Include the speaker(s) that will be presenting this event.',
+		'collapsed'         => '0',
+		'min'               => '',
+		'max'               => '',
+		'layout'            => 'table',
+		'button_label'      => 'Add speaker',
+		'sub_fields' => array(
+			// Speaker Sub-fields.
+			array(
+				'key'			=>		'field_cKXonwRTtFTDD',
+				'label'			=> 		'Speaker Name',
+				'type'			=>		'text',
+				'name'			=> 		'speaker_name',
+				'parent'		=> 		'speaker_information',
+			),
+			array(
+				'key'			=>		'field_1BQYNIYCAu4nl',
+				'label'			=> 		'Speaker Photo',
+				'type'			=>		'image',
+				'preview_size'	=> 		'thumbnail',
+				'return_format'	=>		'id',
+				'name'			=> 		'speaker_photo',
+				'parent'		=> 		'speaker_information',
+			),
+
+			array(
+				'key' 			=>		'field_KGk5myoza42X6',
+				'label' 		=> 		'Speaker Bio',
+				'name' 			=> 		'speaker_bio',
+				'type' 			=> 		'textarea',
+				'parent' 		=> 		'speaker_information',
+			),
+
+			array(
+				'key' 			=> 		'field_B2bK6YOwANTMS',
+				'label'			=>		'Speaker URL',
+				'type'			=>		'url',
+				'name'			=> 		'speaker_url',
+				'return_type'	=>		'array',
+				'parent'		=> 		'speaker_information',
+			),
+
+		),
 	);
 
 	$eventfields[] = array(
@@ -724,11 +778,19 @@ function squarecandy_events_add_fields() {
 	);
 
 	$eventfields[] = array(
+		'key' => 'field_VnjNohwEQrCnA',
+		'label' => 'Event Gallery',
+		'name' => 'event_gallery',
+		'type' => 'gallery',
+		'instructions' => 'Include the images that you would like to be displayed as part of your event.',
+	);	
+
+	$eventfields[] = array(
 		'key' => 'field_5616bf8eed0ad',
 		'label' => 'Short Description',
 		'name' => 'short_description',
 		'type' => 'wysiwyg',
-		'instructions' => 'A short text description for the event. Limit 210 characters.  You may repeat this text and elaborate further in the main body field below.',
+		'instructions' => 'A short text description for the event. Limit 210 characters.',
 		'wrapper' => array(
 			'width' => '',
 			'class' => 'short_wysiwyg',
@@ -767,9 +829,60 @@ function squarecandy_events_add_fields() {
 	);
 
 	$eventfields[] = array(
+		'key' => 'field_dBVmJuGlBzIOZ',
+		'label' => 'Testimonials',
+		'name' => 'testimonials',
+		'type' => 'repeater',
+		'instructions' => 'Include any event testimonials you would like listed for this event.',
+		'collapsed'         => '0',
+		'min'               => '',
+		'max'               => '',
+		'layout'            => 'table',
+		'button_label'      => 'Add testimonial',
+		'sub_fields' => array(
+			// Testimonials Sub-fields.
+			array(
+				'key'			=>		'field_MbQWTdRxft63u',
+				'label'			=> 		'Testimonial Person Photo',
+				'type'			=>		'image',
+				'preview_size'	=> 		'thumbnail',
+				'return_format'	=>		'id',
+				'name'			=> 		'testimonial_person_photo',
+				'parent'		=> 		'testimonials',
+				'required' 		=> 		true,
+			),			
+			array(
+				'key'			=>		'field_Rkk84y4rZGr3a',
+				'label'			=> 		'Testimonial Person Name',
+				'type'			=>		'text',
+				'name'			=> 		'testimonial_person_name',
+				'parent'		=> 		'testimonials',
+				'required' 		=> 		true,
+			),
+			array(
+				'key'			=>		'field_hujHcVV5xtk6S',
+				'label'			=> 		'Testimonial Person Role',
+				'type'			=>		'text',
+				'name'			=> 		'testimonial_role',
+				'parent'		=> 		'testimonials',
+				'required' 		=> 		true,
+			),
+			array(
+				'key' 			=>		'field_Q0fwa6AfmgChH',
+				'label' 		=> 		'Customer Testimonial',
+				'name' 			=> 		'customer_testimonial',
+				'type' 			=> 		'textarea',
+				'parent' 		=> 		'testimonials',
+				'required' 		=> 		true,
+			),
+
+		),
+	);	
+
+	$eventfields[] = array(
 		'key' => 'field_zGhmOM5t7a7g0',
-		'label' => 'Event Gallery',
-		'name' => 'event_gallery',
+		'label' => 'Post-Event Gallery',
+		'name' => 'post_event_gallery',
 		'type' => 'gallery',
 		'instructions' => 'Upload images pertinent to the event',
 	);
@@ -829,7 +942,7 @@ function squarecandy_events_add_fields() {
 			),
 		),
 		'menu_order' => 0,
-		'position' => 'acf_after_title',
+		'position' => 'normal', // Changed so that event metaboxes will be displayed in the Gutenberg editor.
 		'style' => 'default',
 		'label_placement' => 'top',
 		'instruction_placement' => 'label',
